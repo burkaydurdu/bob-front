@@ -29,6 +29,11 @@
    
   :min-lein-version "2.6.1"
 
+  :figwheel {:css-dirs ["resources/public/css"]}
+
+  :less {:source-paths ["less"]
+         :target-path  "resources/public/css"}
+
   :profiles {:uberjar {:aot :all}
 
              :dev {:dependencies [[binaryage/devtools "0.9.10"]
