@@ -17,6 +17,8 @@
             [lein-ring "0.12.5"]
             [lein-cljfmt "0.6.4"]]
 
+  :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
+  
   :source-paths ["src/clj" "src/cljs"]
   
   :resource-paths ["resources"]
@@ -50,4 +52,14 @@
                                        :preloads             [devtools.preload
                                                               day8.re-frame-10x.preload]
                                        :closure-defines      {"re_frame.trace.trace_enabled_QMARK_"        true
-                                                              "day8.re_frame.tracing.trace_enabled_QMARK_" true}}}]})
+                                                              "day8.re_frame.tracing.trace_enabled_QMARK_" true}}}
+                       {:id "prod"
+                        :source-paths ["src/cljs"]
+                        :compiler     {:main          bob-front.core
+                                       :output-to            "resources/public/js/compiled/app.js"
+                                       :asset-path           "js/compiled/out"
+                                       :optimizations :advanced
+                                       :warnings              false}}]}
+  
+  :aliases {"package" ["do" "clean" ["cljsbuild" "once" "prod"]]}
+  )
