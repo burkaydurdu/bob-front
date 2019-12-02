@@ -59,7 +59,7 @@
                                        :output-to            "resources/public/js/compiled/app.js"
                                        :asset-path           "js/compiled/out"
                                        :optimizations :advanced
-                                       :warnings              false}}]}
+                                       :warnings              false
+                                       :closure-defines  {"bob-front.util.api-url" "https://vast-meadow-89739.herokuapp.com"}}}]}
   
-  :aliases {"package" ["do" "clean" ["cljsbuild" "once" "prod"]]}
-  )
+  :aliases {"package" ["do" "clean" ["cljsbuild" "once" "prod"]]})
