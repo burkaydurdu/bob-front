@@ -61,6 +61,6 @@
                                        :optimizations :advanced
                                        :warnings              false
                                        :closure-defines  {goog.DEBUG               false
-                                                          "bob-front.util.api-url" "https://vast-meadow-89739.herokuapp.com"}}}]}
+                                                          "bob_front.util.api-url" "https://vast-meadow-89739.herokuapp.com"}}}]}
   
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "prod"]]})
