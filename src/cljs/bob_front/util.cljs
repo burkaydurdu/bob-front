@@ -4,8 +4,8 @@
 
 (goog-define timeout 3000)
 
-(goog-define api-url "https://vast-meadow-89739.herokuapp.com")
-;; (goog-define api-url "http://localhost:3000")
+;;(goog-define api-url "https://vast-meadow-89739.herokuapp.com")
+(goog-define api-url "http://localhost:3000")
 
 (defn create-request-map
   ([type uri]

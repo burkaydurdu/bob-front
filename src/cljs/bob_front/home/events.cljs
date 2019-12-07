@@ -13,3 +13,14 @@
   (fn [db [_ data]]
     (assoc-in db [:home :last-coffee-status] data )))
 
+
+(reg-event-fx
+  :get-last-brewing-coffee
+  (fn [{:keys [db]} _]
+    {:http-xhrio (util/create-request-map :get "/coffee/analysis"
+                                          :get-last-brewing-coffee-result-ok)}))
+
+(reg-event-db
+  :get-last-brewing-coffee-result-ok
+  (fn [db [_ data]]
+    (assoc-in db [:home :brewing-coffee-count] data )))

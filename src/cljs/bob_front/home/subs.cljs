@@ -11,3 +11,9 @@
   :<- [:home]
   (fn [home]
     (:last-coffee-status home)))
+
+(reg-sub
+  :brewing-coffee-count
+  :<- [:home]
+  (fn [home]
+    (:brewing-coffee-count home)))
