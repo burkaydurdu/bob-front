@@ -60,12 +60,12 @@
                                                               "day8.re_frame.tracing.trace_enabled_QMARK_" true}}}
                        {:id "prod"
                         :source-paths ["src/cljs"]
-                        :compiler     {:main          bob-front.core
-                                       :output-to            "resources/public/js/compiled/app.js"
-                                       :asset-path           "js/compiled/out"
-                                       :optimizations :advanced
-                                       :warnings              false
+                        :compiler     {:main             bob-front.core
+                                       :output-to        "resources/public/js/compiled/app.js"
+                                       :asset-path       "js/compiled/out"
+                                       :optimizations    :advanced
+                                       :warnings         false
                                        :closure-defines  {goog.DEBUG               false
-                                                          "bob_front.util.api-url" "https://vast-meadow-89739.herokuapp.com"}}}]}
+                                                          "bob_front.util.api_url" "https://vast-meadow-89739.herokuapp.com"}}}]}
   
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "prod"]]})
